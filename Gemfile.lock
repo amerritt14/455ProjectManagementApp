@@ -71,13 +71,18 @@ GEM
     ast (2.4.0)
     autoprefixer-rails (8.3.0)
       execjs
-    aws-sdk (2.11.33)
-      aws-sdk-resources (= 2.11.33)
-    aws-sdk-core (2.11.33)
+    aws-partitions (1.80.0)
+    aws-sdk-core (3.19.0)
+      aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.11.33)
-      aws-sdk-core (= 2.11.33)
+    aws-sdk-kms (1.5.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-s3 (1.9.0)
+      aws-sdk-core (~> 3)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.0)
     aws-sigv4 (1.0.2)
     bcrypt (3.1.11)
     better_errors (2.4.0)
@@ -355,7 +360,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-session_store!
   annotate
-  aws-sdk (~> 2.0)
+  aws-sdk-s3
   better_errors
   binding_of_caller
   bootsnap
